@@ -1,5 +1,5 @@
 /* Script-level (global) variables */
-let data, scatterplot, linechart, histogram;
+let data, scatterplot, linechart, histogram1, histogram2;
 const toggleVisualizationButton = document.getElementById("toggleVisualization");
 
 /* Functions */
@@ -65,9 +65,13 @@ function createLinechart(data) {
 }
 
 // Function for creating a D3 histogram
-function createHistogram(data) {
-  histogram = new Histogram({
-    'parentElement': '#histogram',
+function createHistograms(data) {
+  histogram1 = new Histogram1({
+    'parentElement': '#histogram1',
+  }, data);
+
+  histogram2 = new Histogram2({
+    'parentElement': '#histogram2',
   }, data);
 }
 
@@ -118,7 +122,9 @@ function toggleCurrentVisualization() {
 function updateVisualizations() {
   scatterplot.updateVis();
   linechart.updateVis();
-  //histogram.updateVis();
+  histogram1.updateVis();
+  histogram2.updateVis();
+
 }
 
 /*
@@ -148,7 +154,7 @@ d3.csv('data/national_health_data.csv')
     // call functions to create instances of the various data visualization classes (histogram, scatterplot, etc)
     createScatterplot(data);
     createLinechart(data);
-    createHistogram(data);
+    createHistograms(data);
 
     createAccordionMenu(data);      // calls function which creates the accordion menu and populates values
 
