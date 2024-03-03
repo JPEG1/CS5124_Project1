@@ -62,8 +62,8 @@ body {
     margin-bottom: 10px;
 }
 
-/* Tooltip */
-#tooltip {
+/* Tooltips */
+#tooltip, #histogram1-tooltip, #histogram2-tooltip  {
     position: absolute;
     display: none;
     background: #fff;
@@ -72,7 +72,7 @@ body {
     font-size: 12px;
     font-weight: 500;
     padding: 8px;
-    min-width: 160px;
+    min-width: 120px;
     color: #333;
 }
 .tooltip-title {

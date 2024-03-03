@@ -25,11 +25,11 @@
         </div>
         <button id="toggleVisualization">Toggle Visualization</button>
         <div class="axis_selection">
-            <label>Vertical Axis</label>
+            <label>Dependent Variable</label>
             <select id="yAxisSelect"></select>
         </div>
         <div class="axis_selection">
-            <label>Horizontal Axis</label>
+            <label>Independent Variable</label>
             <select id="xAxisSelect"></select>
         </div>
     </div>
@@ -52,14 +52,19 @@
             <svg id="linechart"></svg>
         </div>
         <div id="histogram-container" style="display: none;">
-            <h3>Histogram:</h3>
-            <h5 class="disclaimer"><u>Disclaimer</u>: This visualization is unfinished and less meaningful. I initially added it to offer alternate perspectives on the dataset. However, I abandoned it fairly early into development.</h5>
-            <svg id="histogram" width="760" height="460"></svg> <!-- NOTE: For some reason, if the width/height aren't hard-coded here, they get overwritten (not by the defined values in the .js either) -->
+            <h3>Histograms:</h3>
+            <!-- NOTE: For some reason, if the width/height aren't hard-coded here, they get overwritten (not by the defined values in the .js either) -->
+            <div class="histogram-svg-container">
+                <svg id="histogram1" width="660" height="460"></svg>
+                <svg id="histogram2" width="660" height="460"></svg>
+            </div>
         </div>
     </div>
 
     <!-- Tooltips -->
     <div id="tooltip"></div>
+    <div id="histogram1-tooltip"></div>
+    <div id="histogram2-tooltip"></div>
 
     <!-- D3 bundle -->
     <script src="js/d3.v6.min.js" type="text/javascript"></script>
@@ -70,6 +75,7 @@
     <script src="js/accordion.js" type="text/javascript"></script>
     <script src="js/scatterplot.js" type="text/javascript"></script>
     <script src="js/linechart.js" type="text/javascript"></script>
-    <script src="js/histogram.js" type="text/javascript"></script>
+    <script src="js/histogram1.js" type="text/javascript"></script>
+    <script src="js/histogram2.js" type="text/javascript"></script>
 </body>
 </html>
