@@ -63,7 +63,7 @@ body {
 }
 
 /* Tooltips */
-#tooltip, #histogram1-tooltip, #histogram2-tooltip  {
+#tooltip, #histogram1-tooltip, #histogram2-tooltip, #choropleth-tooltip  {
     position: absolute;
     display: none;
     background: #fff;
