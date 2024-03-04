@@ -1,0 +1,16 @@
+#choropleth-container {
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+.choropleth-svg-container {
+    flex: 1;
+    display: flex;
+}
+
+.choropleth-svg-container svg {
+    flex: 1;
+    margin: 5px;
+    height: 500px;
+}

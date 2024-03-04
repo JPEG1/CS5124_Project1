@@ -63,6 +63,10 @@ function createAccordionSection(sectionText, subContent) {
 
   // Add event listener to toggle panel visibility
   button.addEventListener("click", function() {
+      if (currVisNumber == 4) {
+        return; // this button is disabled while the choropleth maps are shown
+      }
+
       // Toggle between adding and removing the "active" class
       this.classList.toggle("active");
 
@@ -97,6 +101,10 @@ function createAccordionSection(sectionText, subContent) {
 
 // Function to handle expanding all accordion sections
 function expandAllSections() {
+  if (currVisNumber == 4) {
+    return; // this button is disabled while the choropleth maps are shown
+  }
+
   var acc = document.getElementsByClassName("accordion");
   for (var i = 0; i < acc.length; i++) {
       // Check if the section is not already active
@@ -109,6 +117,10 @@ function expandAllSections() {
 
 // Function to handle collapsing all accordion sections
 function collapseAllSections() {
+  if (currVisNumber == 4) {
+    return; // this button is disabled while the choropleth maps are shown
+  }
+
   var acc = document.getElementsByClassName("accordion");
   for (var i = 0; i < acc.length; i++) {
       // Check if the section is active
